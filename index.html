@@ -1,389 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Balloora — Luxury Event Styling, Balloon Décor &amp; Custom Merch in Ontario</title>
-  <meta name="description" content="Balloora designs luxury balloon installations, venue styling, and custom event merchandise for celebrations across Ontario, including the Greater Toronto Area.">
-  <meta name="theme-color" content="#b8860b">
-  <link rel="icon" href="assets/favicon.png">
+/* ==========================================================================
+   Balloora — Flat & Bright Theme
+   ========================================================================== */
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+:root {
+  --color-primary: #aa8c6a; /* The warm taupe/gold from the mockup button */
+  --color-primary-hover: #93785a;
+  --color-btn-light: #ece7e0;
+  --color-btn-light-hover: #e0d8cd;
+  
+  --color-bg: #ffffff;
+  --color-bg-alt: #fcfbfa;
+  --color-text: #333333;
+  --color-text-soft: #666666;
+  --color-border: #eaeaea;
+  
+  --color-footer-bg: #f9f8f6;
+  --color-footer-text: #444444;
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+  --max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --transition: 0.3s ease;
+}
 
-  <a class="skip-link" href="#main">Skip to content</a>
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; border: none; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; margin: 0; color: var(--color-text); }
+p { margin: 0; }
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span class="topbar-area">Servicing Ontario &amp; the GTA</span>
-      <div class="topbar-actions">
-        <a href="tel:2896339311" class="topbar-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4.1c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
-          (289) 633-9311
-        </a>
-        <div class="social-links">
-          <a href="https://www.instagram.com/ballooraevents/" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="17" r="3"></circle><path d="M12 17V5.5c0-.4.3-.7.7-.6l5 1.2c.3.1.5.4.5.7v2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"></circle><path d="M14 8.5h-1.5c-.8 0-1.5.7-1.5 1.5v2h3l-.4 3h-2.6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-        </div>
-        <label class="theme-toggle" aria-label="Toggle dark mode">
-          <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" role="switch">
-          <span class="theme-toggle-track">
-            <span class="theme-toggle-thumb">
-              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
-              <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"></path></svg>
-            </span>
-          </span>
-        </label>
-      </div>
-    </div>
-  </div>
+.skip-link { position: absolute; left: -999px; top: 16px; background: var(--color-primary); color: #fff; padding: 12px 20px; z-index: 2000; }
+.skip-link:focus { left: 16px; }
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="logo">
-        <img src="assets/logo-transparent.png" alt="Balloora">
-      </a>
+/* ---------- Layout Utilities ---------- */
+.container { max-width: var(--max-width); margin-inline: auto; padding-inline: 24px; }
+.section { padding-block: 80px; }
+.section-alt { background-color: var(--color-bg-alt); }
+.section-header { margin-bottom: 48px; }
+.section-header--center { text-align: center; max-width: 600px; margin-inline: auto; }
+.section-header h2 { font-size: clamp(2rem, 2vw + 1rem, 2.5rem); margin-bottom: 12px; }
+.section-lede { font-size: 1rem; color: var(--color-text-soft); }
 
-      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition);
+}
+.btn-primary { background-color: var(--color-primary); color: #ffffff; }
+.btn-primary:hover { background-color: var(--color-primary-hover); }
+.btn-light { background-color: var(--color-btn-light); color: var(--color-text); font-size: 0.85rem; padding: 10px 24px; width: 100%; border-radius: 6px; }
+.btn-light:hover { background-color: var(--color-btn-light-hover); }
+.btn-block { display: block; width: 100%; }
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#merch">Merch</a>
-        <a href="#plan-your-event">Plan Your Event</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#reviews">Reviews</a>
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--color-border);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 16px; }
+.logo img { height: 45px; width: auto; }
 
-        <div class="nav-mobile-extra">
-          <a href="tel:2896339311" class="topbar-phone">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4.1c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
-            (289) 633-9311
-          </a>
-          <div class="social-links">
-            <a href="https://www.instagram.com/ballooraevents/" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on TikTok">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="17" r="3"></circle><path d="M12 17V5.5c0-.4.3-.7.7-.6l5 1.2c.3.1.5.4.5.7v2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"></circle><path d="M14 8.5h-1.5c-.8 0-1.5.7-1.5 1.5v2h3l-.4 3h-2.6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </a>
-          </div>
-        </div>
-      </nav>
+.nav-links { display: flex; align-items: center; gap: 32px; font-size: 0.95rem; font-weight: 500; }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links span { font-size: 0.7em; margin-left: 2px; }
+.nav-mobile-extra { display: none; }
 
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </label>
-    </div>
-  </header>
+.header-actions { display: flex; align-items: center; gap: 16px; }
+.icon-btn { background: none; cursor: pointer; display: flex; padding: 4px; color: var(--color-text); }
+.icon-btn svg { width: 22px; height: 22px; }
+.icon-btn:hover { color: var(--color-primary); }
 
-  <main id="main">
+.nav-toggle-checkbox { display: none; }
+.nav-toggle-label { display: none; flex-direction: column; gap: 5px; width: 26px; cursor: pointer; }
+.nav-toggle-label span { display: block; height: 2px; width: 100%; background-color: var(--color-text); }
 
-    <section id="home" class="hero">
-      <img class="hero-media" src="assets/hero-banner.jpg" alt="Elegant balloon installation styled for an Ontario celebration" fetchpriority="high" decoding="async">
-      <div class="hero-scrim"></div>
-      <div class="container hero-content">
-        <h1>Luxury event styling &amp; balloon artistry, perfected</h1>
-        <p class="hero-lede">Balloora designs bespoke balloon installations, venue styling, and custom event merchandise for celebrations across Ontario, including the Greater Toronto Area.</p>
-        <div class="hero-actions">
-          <a href="mailto:info@balloora.ca?subject=Event%20Inquiry" class="btn btn-primary">Inquire Now</a>
-          <a href="#plan-your-event" class="link-cta link-cta-light">Plan Your Event</a>
-        </div>
-      </div>
-    </section>
+@media (max-width: 950px) {
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; background: #fff; padding: 24px; border-bottom: 1px solid var(--color-border);
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links { display: flex; align-items: flex-start; }
+  .nav-links > a { width: 100%; padding-block: 12px; border-bottom: 1px solid var(--color-border); }
+  .nav-toggle-label { display: flex; }
+  .header-actions .btn { display: none; }
+  .nav-mobile-extra { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+}
 
-    <section id="merch" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Customized Merch &amp; Retail Orders</h2>
-          <p class="section-lede">We create bespoke, customized and engraved items for events, gifts, and branding.</p>
-        </div>
+/* ---------- Hero ---------- */
+.hero { background-color: #f7f6f4; overflow: hidden; padding-block: 40px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
+.hero-content h1 { font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.1; margin-bottom: 20px; color: #222; }
+.hero-lede { font-size: 1.1rem; color: var(--color-text-soft); margin-bottom: 32px; }
+.hero-image-wrapper img { width: 100%; height: auto; border-radius: var(--radius-md); object-fit: cover; }
 
-        <div class="merch-grid">
-          <article class="merch-card">
-            <div class="merch-image merch-image--champagne">
-              <img src="assets/product-wallet.jpg" alt="Engraved leather wallet with custom monogram" loading="lazy" decoding="async">
-            </div>
-            <h3>Engraved Leather Wallets</h3>
-            <p>Hand-finished wallets personalized with monograms, foil initials, or custom engravings — a refined favor or keepsake.</p>
-            <span class="merch-price">From $65</span>
-            <a href="mailto:info@balloora.ca?subject=Customization%20Request%20—%20Leather%20Wallets" class="btn btn-outline">Order Customization</a>
-          </article>
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-image-wrapper { grid-row: 1; margin-bottom: 24px; }
+}
 
-          <article class="merch-card">
-            <div class="merch-image merch-image--sage">
-              <img src="assets/product-keychain.jpg" alt="Custom-shaped acrylic keychain with names and event date" loading="lazy" decoding="async">
-            </div>
-            <h3>Custom Acrylic Keychains</h3>
-            <p>Custom-cut acrylic keychains featuring names, dates, or event branding — a playful favor guests keep forever.</p>
-            <span class="merch-price">From $18</span>
-            <a href="mailto:info@balloora.ca?subject=Customization%20Request%20—%20Acrylic%20Keychains" class="btn btn-outline">Order Customization</a>
-          </article>
+/* ---------- Occasions Icons ---------- */
+.category-section { padding-block: 60px 20px; }
+.category-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.category-item { display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1; min-width: 100px; text-align: center; }
+.category-icon { 
+  width: 70px; height: 70px; border-radius: 50%; border: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center; color: var(--color-primary);
+  background-color: var(--color-bg-alt); transition: all 0.2s ease;
+}
+.category-icon svg { width: 32px; height: 32px; }
+.category-item:hover .category-icon { background-color: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.category-item span { font-size: 0.9rem; font-weight: 500; }
 
-          <article class="merch-card">
-            <div class="merch-image merch-image--blush">
-              <img src="assets/product-apparel.jpg" alt="Personalized t-shirt for a bridal party or team event" loading="lazy" decoding="async">
-            </div>
-            <h3>Personalized T-Shirts &amp; Apparel</h3>
-            <p>Custom apparel for bridal parties, birthdays, or team branding — printed or embroidered to your spec.</p>
-            <span class="merch-price">From $32</span>
-            <a href="mailto:info@balloora.ca?subject=Customization%20Request%20—%20Apparel" class="btn btn-outline">Order Customization</a>
-          </article>
+/* ---------- Featured Designs (Cards) ---------- */
+.product-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.product-card { text-align: center; }
+.product-image { aspect-ratio: 4/5; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 16px; background: var(--color-bg-alt); }
+.product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.product-card:hover .product-image img { transform: scale(1.05); }
+.product-card h3 { font-size: 1rem; margin-bottom: 4px; font-family: var(--font-body); font-weight: 600; }
+.product-card p { font-size: 0.85rem; color: var(--color-text-soft); margin-bottom: 16px; }
 
-          <article class="merch-card">
-            <div class="merch-image merch-image--taupe">
-              <img src="assets/product-pens.jpg" alt="Custom engraved pen and matching premium stationery" loading="lazy" decoding="async">
-            </div>
-            <h3>Custom Engraved Pens &amp; Stationery</h3>
-            <p>Engraved pens paired with premium stationery suites for signing books, favors, or corporate gifting.</p>
-            <span class="merch-price">From $28</span>
-            <a href="mailto:info@balloora.ca?subject=Customization%20Request%20—%20Pens%20%26%20Stationery" class="btn btn-outline">Order Customization</a>
-          </article>
+@media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .product-grid { grid-template-columns: 1fr; } }
 
-          <article class="merch-card">
-            <div class="merch-image merch-image--champagne">
-              <img src="assets/product-balloons.jpg" alt="Custom printed balloons with names and logos" loading="lazy" decoding="async">
-            </div>
-            <h3>Bespoke Customized Printed Balloons</h3>
-            <p>Balloons custom-printed with names, logos, or messages — the signature Balloora touch for any celebration.</p>
-            <span class="merch-price">From $12</span>
-            <a href="mailto:info@balloora.ca?subject=Customization%20Request%20—%20Printed%20Balloons" class="btn btn-outline">Order Customization</a>
-          </article>
-        </div>
-      </div>
-    </section>
+/* ---------- Repurposed Sections (Gallery, Form, Reviews) ---------- */
+.mosaic-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 16px; }
+.mosaic-item { overflow: hidden; border-radius: var(--radius-sm); margin: 0; background: var(--color-bg-alt); }
+.mosaic-item--large { grid-column: span 2; grid-row: span 2; }
+.mosaic-item--wide { grid-column: span 4; }
+.mosaic-item img { width: 100%; height: 100%; object-fit: cover; }
 
-    <section id="plan-your-event" class="section section-alt">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <h2>Plan Your Event</h2>
-          <p class="section-lede">Tell us about your vision and we'll put together a complimentary estimate for your celebration.</p>
-        </div>
+.quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.quote-card { background: #fff; padding: 32px; border: 1px solid var(--color-border); border-radius: var(--radius-md); text-align: center; }
+.quote-stars { color: var(--color-primary); margin-bottom: 12px; letter-spacing: 2px; }
+.quote-text { font-style: italic; margin-bottom: 24px; }
+.quote-name { display: block; font-weight: 600; }
+.quote-meta { font-size: 0.85rem; color: var(--color-text-soft); }
 
-        <div class="estimator-panel">
-          <!-- Static markup: connect the action attribute to a form backend such as Formspree or Netlify Forms to receive submissions. -->
-          <form class="estimator-form" action="#" method="POST">
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="fullName">Full name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" autocomplete="name" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(289) 633-9311" autocomplete="tel" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required>
-              </div>
-              <div class="form-group">
-                <label for="eventDate">Event date</label>
-                <input type="date" id="eventDate" name="eventDate">
-              </div>
-              <div class="form-group">
-                <label for="city">City in Ontario</label>
-                <select id="city" name="city" autocomplete="address-level2" required>
-                  <option value="" disabled selected>Select city</option>
-                  <option>Mississauga</option>
-                  <option>Toronto</option>
-                  <option>Brampton</option>
-                  <option>Oakville</option>
-                  <option>Vaughan</option>
-                  <option>Hamilton</option>
-                  <option>Other Ontario City</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="eventType">Event type</label>
-                <select id="eventType" name="eventType" required>
-                  <option value="" disabled selected>Select event type</option>
-                  <option>Wedding</option>
-                  <option>Bridal Shower</option>
-                  <option>Baby Shower / Gender Reveal</option>
-                  <option>Birthday Celebration</option>
-                  <option>Corporate Event / Gala</option>
-                  <option>Engagement Party</option>
-                  <option>Anniversary</option>
-                  <option>Other</option>
-                </select>
-              </div>
+.estimator-panel { max-width: 700px; margin: 0 auto; background: #fff; padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--color-border); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.form-group--full { grid-column: 1 / -1; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
+.form-group input { width: 100%; padding: 12px 16px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg-alt); }
+.form-group input:focus { outline: none; border-color: var(--color-primary); background: #fff; }
 
-              <fieldset class="form-group form-group--full checkbox-fieldset">
-                <legend>Services needed</legend>
-                <div class="checkbox-group">
-                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Balloon Decor"> Balloon Decor</label>
-                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Venue Setup"> Venue Setup</label>
-                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Custom Merch"> Custom Merch</label>
-                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Venue Repair"> Venue Repair</label>
-                </div>
-              </fieldset>
+@media (max-width: 768px) {
+  .mosaic-grid { grid-template-columns: repeat(2, 1fr); }
+  .quote-grid, .form-grid { grid-template-columns: 1fr; }
+  .mosaic-item--wide { grid-column: span 2; }
+}
 
-              <div class="form-group">
-                <label for="budget">Estimated budget</label>
-                <select id="budget" name="budget">
-                  <option value="" disabled selected>Select a range</option>
-                  <option>Under $500</option>
-                  <option>$500 – $1,500</option>
-                  <option>$1,500 – $3,000</option>
-                  <option>$3,000 – $5,000</option>
-                  <option>$5,000+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="details">Tell us about your vision</label>
-                <input type="text" id="details" name="details" placeholder="Colors, theme, guest count...">
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Request My Estimate</button>
-          </form>
-        </div>
-      </div>
-    </section>
+/* ---------- Footer ---------- */
+.site-footer { background-color: var(--color-footer-bg); color: var(--color-footer-text); padding-top: 60px; border-top: 1px solid var(--color-border); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo { height: 35px; filter: grayscale(1) opacity(0.8); margin-bottom: 16px; }
+.footer-brand p { font-size: 0.9rem; max-width: 30ch; margin-bottom: 20px; }
+.footer-brand .social-links a { color: var(--color-footer-text); }
+.footer-links h4, .footer-contact h4, .footer-areas h4 { font-size: 0.9rem; margin-bottom: 16px; color: #111; }
+.footer-links a, .footer-contact a { display: block; font-size: 0.9rem; margin-bottom: 8px; color: var(--color-text-soft); }
+.footer-links a:hover, .footer-contact a:hover { color: var(--color-primary); }
+.footer-areas p { font-size: 0.9rem; color: var(--color-text-soft); }
+.footer-bottom { border-top: 1px solid #e5e5e5; padding-block: 20px; text-align: center; }
+.footer-bottom p { font-size: 0.85rem; color: var(--color-text-soft); }
 
-    <section id="portfolio" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Past Events</h2>
-          <p class="section-lede">A glimpse into the celebrations we've had the honour of styling across Ontario.</p>
-        </div>
-
-        <div class="mosaic-grid">
-          <figure class="mosaic-item mosaic-item--large mosaic-item--blush">
-            <img src="assets/portfolio-1.jpg" alt="Luxury balloon installation at a GTA wedding" loading="lazy" decoding="async">
-            <figcaption>GTA Luxury Wedding Setup</figcaption>
-          </figure>
-          <figure class="mosaic-item mosaic-item--taupe">
-            <img src="assets/portfolio-2.jpg" alt="Gold balloon and stage styling for a Toronto corporate gala" loading="lazy" decoding="async">
-            <figcaption>Toronto Corporate Gala</figcaption>
-          </figure>
-          <figure class="mosaic-item mosaic-item--sage">
-            <img src="assets/portfolio-3.jpg" alt="Balloon wall backdrop for a Mississauga baby shower" loading="lazy" decoding="async">
-            <figcaption>Mississauga Baby Shower Balloon Wall</figcaption>
-          </figure>
-          <figure class="mosaic-item mosaic-item--champagne">
-            <img src="assets/portfolio-4.jpg" alt="Milestone birthday balloon installation in Brampton" loading="lazy" decoding="async">
-            <figcaption>Brampton Milestone Birthday</figcaption>
-          </figure>
-          <figure class="mosaic-item mosaic-item--blush">
-            <img src="assets/portfolio-5.jpg" alt="Engagement party balloon backdrop in Oakville" loading="lazy" decoding="async">
-            <figcaption>Oakville Engagement Backdrop</figcaption>
-          </figure>
-          <figure class="mosaic-item mosaic-item--wide mosaic-item--sage">
-            <img src="assets/portfolio-6.jpg" alt="Bridal shower balloon styling across the GTA" loading="lazy" decoding="async">
-            <figcaption>GTA Bridal Shower Styling</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Customer Reviews</h2>
-          <p class="section-lede">Hear from a few of the clients we've had the pleasure of celebrating with.</p>
-        </div>
-
-        <div class="quote-grid">
-          <article class="quote-card">
-            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p>
-            <p class="quote-text">Balloora transformed our reception into something out of a magazine. Every guest asked who did our balloon work.</p>
-            <div class="quote-footer">
-              <img class="quote-avatar" src="assets/review-1.jpg" alt="" loading="lazy" decoding="async">
-              <div>
-                <span class="quote-name">Priya S.</span>
-                <span class="quote-meta">Wedding, Toronto</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="quote-card">
-            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p>
-            <p class="quote-text">Professional from the first email to the final teardown. Our product launch has never looked so polished.</p>
-            <div class="quote-footer">
-              <img class="quote-avatar" src="assets/review-2.jpg" alt="" loading="lazy" decoding="async">
-              <div>
-                <span class="quote-name">Michael K.</span>
-                <span class="quote-meta">Corporate Event, Mississauga</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="quote-card">
-            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p>
-            <p class="quote-text">They captured exactly what I dreamed of for my daughter's baby shower, down to the smallest ribbon.</p>
-            <div class="quote-footer">
-              <img class="quote-avatar" src="assets/review-3.jpg" alt="" loading="lazy" decoding="async">
-              <div>
-                <span class="quote-name">Amara R.</span>
-                <span class="quote-meta">Baby Shower, Brampton</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img class="footer-logo" src="assets/logo-transparent.png" alt="Balloora" loading="lazy" decoding="async">
-        <p>An Ontario-based studio crafting luxury balloon décor, venue styling, and custom event merchandise across the Greater Toronto Area and beyond.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/ballooraevents/" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="17" r="3"></circle><path d="M12 17V5.5c0-.4.3-.7.7-.6l5 1.2c.3.1.5.4.5.7v2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Balloora on Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"></circle><path d="M14 8.5h-1.5c-.8 0-1.5.7-1.5 1.5v2h3l-.4 3h-2.6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-        </div>
-      </div>
-
-      <nav class="footer-links" aria-label="Footer">
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#merch">Merch</a>
-        <a href="#plan-your-event">Plan Your Event</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#reviews">Reviews</a>
-      </nav>
-
-      <div class="footer-contact">
-        <h4>Contact</h4>
-        <a href="mailto:info@balloora.ca">info@balloora.ca</a>
-        <a href="tel:2896339311">(289) 633-9311</a>
-      </div>
-
-      <div class="footer-areas">
-        <h4>Service Area</h4>
-        <p>Servicing Ontario, including the GTA.</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Balloora Inc. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+@media (max-width: 800px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
