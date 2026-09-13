@@ -1,148 +1,453 @@
-<!-- Replace the existing <section id="home"> and <section id="merch"> in index_2.html with these three updated sections to match the provided mockup exactly -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Balloora Events — Luxury Balloon Décor &amp; Event Styling in Ontario</title>
+  <meta name="description" content="Balloora Events designs luxury balloon installations, event styling, and custom decor packages for celebrations across Ontario, including the Greater Toronto Area.">
+  <meta name="theme-color" content="#c19a5b">
+  <link rel="icon" href="assets/favicon.png">
 
-<section id="home" class="hero">
-  <img class="hero-media" src="assets/hero-banner.jpg" alt="Beautiful Moments Start with Balloora" fetchpriority="high" decoding="async">
-  <div class="hero-scrim"></div>
-  <div class="container hero-content">
-    <h1>Beautiful Moments Start with Balloora</h1>
-    <p class="hero-lede">Balloons &bull; Flowers &bull; Event Decor &bull; Unforgettable Memories</p>
-    <div class="hero-actions">
-      <a href="#featured-designs" class="btn btn-primary" style="background-color: #b08d6a; border-color: #b08d6a;">Shop Our Collections &rarr;</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <svg class="logo-mark" viewBox="0 0 40 34" aria-hidden="true">
+          <circle cx="14" cy="13" r="9" fill="#f3e9d8" stroke="#c19a5b" stroke-width="1.3"/>
+          <circle cx="24" cy="10" r="7" fill="#faf8f4" stroke="#a67f45" stroke-width="1.3"/>
+          <path d="M14 22v9M24 17v11" stroke="#c19a5b" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">Balloora<small>Events</small></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <div class="nav-dropdown">
+          <a href="#occasions" class="nav-dropdown-trigger">
+            Occasions
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1.5l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="#occasions">Birthday</a>
+            <a href="#occasions">Baby Shower</a>
+            <a href="#occasions">Gender Reveal</a>
+            <a href="#occasions">Weddings</a>
+            <a href="#occasions">Corporate Events</a>
+            <a href="#occasions">Special Occasions</a>
+          </div>
+        </div>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+
+        <div class="nav-mobile-extra">
+          <a href="tel:2896339311" class="mobile-phone-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4.1c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            (289) 633-9311
+          </a>
+          <a href="https://www.instagram.com/ballooraevents/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Balloora on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.5-4.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="tel:2896339311" class="icon-btn" aria-label="Call Balloora Events">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4.1c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#" class="icon-btn" aria-label="View cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20.5 8H6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.3" fill="currentColor" stroke="none"/><circle cx="17" cy="21" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get a Quote</a>
+      </div>
+
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="occasions" class="section">
-  <div class="container">
-    <div class="occasions-grid" style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 1rem;">
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-birthday.svg" alt="Birthday" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Birthday</p>
+  <main id="main">
+
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Beautiful Moments<br>Start with Balloora</h1>
+          <p class="hero-lede">Balloons &bull; Flowers &bull; Event Decor &bull; Unforgettable Memories</p>
+          <a href="#packages" class="btn btn-primary">Shop Our Collections <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="hero-media">
+          <img src="assets/hero-arch.jpg" alt="Gold and cream balloon arch with florals and a 'Better Together' neon sign" fetchpriority="high" decoding="async">
+        </div>
       </div>
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-baby-shower.svg" alt="Baby Shower" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Baby Shower</p>
+    </section>
+
+    <section id="occasions" class="occasions">
+      <div class="container occasions-grid">
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="12" width="16" height="8" rx="1.5"/><path d="M4 16h16" opacity="0.5"/><path d="M12 12V8" stroke-linecap="round"/><path d="M12 6.5c-.9 0-1.2-.8-.6-1.5.3-.4.6-1 .6-1.4 0 .4.3 1 .6 1.4.6.7.3 1.5-.6 1.5z"/><path d="M8 12l1-2M16 12l-1-2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="occasion-label">Birthday</span>
+        </a>
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3h8l1 4-3 1v2.5c1.8.4 3 2 3 4v5.5a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-5.5c0-2 1.2-3.6 3-4V8L7 7l1-4z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </span>
+          <span class="occasion-label">Baby Shower</span>
+        </a>
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="15.5" r="4"/><path d="M11.5 12.5l4.3-4.3M15.8 4.3v3.9h-3.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="occasion-label">Gender Reveal</span>
+        </a>
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/></svg>
+          </span>
+          <span class="occasion-label">Weddings</span>
+        </a>
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h5l-.7 6.5a1.8 1.8 0 0 1-1.8 1.5 1.8 1.8 0 0 1-1.8-1.5L5 3z" stroke-linejoin="round"/><path d="M7.5 11v7M5 21h5" stroke-linecap="round"/><path d="M19 3h-5l.7 6.5a1.8 1.8 0 0 0 1.8 1.5 1.8 1.8 0 0 0 1.8-1.5L19 3z" stroke-linejoin="round"/><path d="M16.5 11v7M14 21h5" stroke-linecap="round"/></svg>
+          </span>
+          <span class="occasion-label">Corporate Events</span>
+        </a>
+        <a href="#packages" class="occasion">
+          <span class="occasion-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l6 15H6l6-15z" stroke-linejoin="round"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/><path d="M19.5 5.5l1.2-1.2M19.5 5.5l1.2 1.2M19.5 5.5h1.8" stroke-linecap="round" opacity="0.7"/></svg>
+          </span>
+          <span class="occasion-label">Special Occasions</span>
+        </a>
       </div>
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-gender-reveal.svg" alt="Gender Reveal" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Gender Reveal</p>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <h2>About Balloora</h2>
+          <p>Balloora Events is Ontario's boutique balloon artistry and event styling studio. From intimate baby showers to grand corporate galas, we bring warmth, craftsmanship, and a touch of champagne-gold magic to every celebration across the GTA.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Events Styled</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5.0&#9733;</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Ontario-Wide</span>
+          </div>
+        </div>
       </div>
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-weddings.svg" alt="Weddings" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Weddings</p>
+    </section>
+
+    <section id="packages" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Designs</h2>
+          <p class="section-lede">Explore our most popular balloon decorations, designed to make every occasion extra special.</p>
+        </div>
+
+        <div class="design-grid">
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-classic-arch.jpg" alt="Classic gold and cream balloon arch" loading="lazy" decoding="async"></div>
+            <h3>Classic Balloon Arch</h3>
+            <span class="design-price">Starting at $180</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Classic%20Balloon%20Arch" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-birthday-backdrop.jpg" alt="Pink and gold birthday balloon backdrop with neon sign" loading="lazy" decoding="async"></div>
+            <h3>Birthday Backdrop</h3>
+            <span class="design-price">Starting at $250</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Birthday%20Backdrop" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-kids-theme.jpg" alt="Blue balloon arch with teddy bear and number one for first birthday" loading="lazy" decoding="async"></div>
+            <h3>Kids Theme Setup</h3>
+            <span class="design-price">Starting at $300</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Kids%20Theme%20Setup" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-gender-reveal.jpg" alt="Pink and blue gender reveal balloon setup with 'Boy or Girl' sign" loading="lazy" decoding="async"></div>
+            <h3>Gender Reveal Setup</h3>
+            <span class="design-price">Starting at $350</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Gender%20Reveal%20Setup" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-baby-shower.jpg" alt="Sage and cream balloon arch with florals for a baby shower" loading="lazy" decoding="async"></div>
+            <h3>Baby Shower Decor</h3>
+            <span class="design-price">Starting at $300</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Baby%20Shower%20Decor" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-wedding-backdrop.jpg" alt="Ivory floral and balloon wedding backdrop with 'Mr and Mrs' sign" loading="lazy" decoding="async"></div>
+            <h3>Wedding Backdrop</h3>
+            <span class="design-price">Starting at $450</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Wedding%20Backdrop" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-centerpieces.jpg" alt="Balloon and floral table centerpiece" loading="lazy" decoding="async"></div>
+            <h3>Table Centerpieces</h3>
+            <span class="design-price">Starting at $60</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Table%20Centerpieces" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-corporate.jpg" alt="Black and gold balloon arch for a corporate event" loading="lazy" decoding="async"></div>
+            <h3>Corporate Events</h3>
+            <span class="design-price">Starting at $400</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Corporate%20Events" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-columns.jpg" alt="White and gold balloon columns flanking an entrance" loading="lazy" decoding="async"></div>
+            <h3>Balloon Columns</h3>
+            <span class="design-price">Starting at $150</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Balloon%20Columns" class="btn btn-soft">View Details</a>
+          </article>
+          <article class="design-card">
+            <div class="design-image"><img src="assets/design-ceiling.jpg" alt="Gold and white balloon ceiling installation over a reception hall" loading="lazy" decoding="async"></div>
+            <h3>Event Ceiling Decor</h3>
+            <span class="design-price">Starting at $500</span>
+            <a href="mailto:info@balloora.ca?subject=Quote%20Request%20—%20Event%20Ceiling%20Decor" class="btn btn-soft">View Details</a>
+          </article>
+        </div>
       </div>
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-corporate.svg" alt="Corporate Events" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Corporate Events</p>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Gallery</h2>
+          <p class="section-lede">A glimpse into real celebrations we've had the honour of styling across Ontario.</p>
+        </div>
+
+        <div class="mosaic-grid">
+          <figure class="mosaic-item mosaic-item--large">
+            <img src="assets/gallery-1.jpg" alt="Luxury balloon installation at a GTA wedding" loading="lazy" decoding="async">
+            <figcaption>GTA Luxury Wedding Setup</figcaption>
+          </figure>
+          <figure class="mosaic-item">
+            <img src="assets/gallery-2.jpg" alt="Gold balloon and stage styling for a Toronto corporate gala" loading="lazy" decoding="async">
+            <figcaption>Toronto Corporate Gala</figcaption>
+          </figure>
+          <figure class="mosaic-item">
+            <img src="assets/gallery-3.jpg" alt="Balloon wall backdrop for a Mississauga baby shower" loading="lazy" decoding="async">
+            <figcaption>Mississauga Baby Shower</figcaption>
+          </figure>
+          <figure class="mosaic-item">
+            <img src="assets/gallery-4.jpg" alt="Milestone birthday balloon installation in Brampton" loading="lazy" decoding="async">
+            <figcaption>Brampton Milestone Birthday</figcaption>
+          </figure>
+          <figure class="mosaic-item">
+            <img src="assets/gallery-5.jpg" alt="Engagement party balloon backdrop in Oakville" loading="lazy" decoding="async">
+            <figcaption>Oakville Engagement Backdrop</figcaption>
+          </figure>
+          <figure class="mosaic-item mosaic-item--wide">
+            <img src="assets/gallery-6.jpg" alt="Bridal shower balloon styling across the GTA" loading="lazy" decoding="async">
+            <figcaption>GTA Bridal Shower Styling</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="occasion-item">
-        <div class="occasion-icon"><img src="assets/icon-special.svg" alt="Special Occasions" width="64" height="64"></div>
-        <p style="margin-top: 0.5rem; font-weight: 500;">Special Occasions</p>
+    </section>
+
+    <section id="reviews" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Customer Reviews</h2>
+          <p class="section-lede">Hear from a few of the clients we've had the pleasure of celebrating with.</p>
+        </div>
+
+        <div class="quote-grid">
+          <article class="quote-card">
+            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <p class="quote-text">Balloora transformed our reception into something out of a magazine. Every guest asked who did our balloon work.</p>
+            <div class="quote-footer">
+              <img class="quote-avatar" src="assets/review-1.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <span class="quote-name">Priya S.</span>
+                <span class="quote-meta">Wedding, Toronto</span>
+              </div>
+            </div>
+          </article>
+          <article class="quote-card">
+            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <p class="quote-text">Professional from the first email to the final teardown. Our product launch has never looked so polished.</p>
+            <div class="quote-footer">
+              <img class="quote-avatar" src="assets/review-2.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <span class="quote-name">Michael K.</span>
+                <span class="quote-meta">Corporate Event, Mississauga</span>
+              </div>
+            </div>
+          </article>
+          <article class="quote-card">
+            <p class="quote-stars" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <p class="quote-text">They captured exactly what I dreamed of for my daughter's baby shower, down to the smallest ribbon.</p>
+            <div class="quote-footer">
+              <img class="quote-avatar" src="assets/review-3.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <span class="quote-name">Amara R.</span>
+                <span class="quote-meta">Baby Shower, Brampton</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Plan Your Event</h2>
+          <p class="section-lede">Tell us about your vision and we'll put together a complimentary estimate for your celebration.</p>
+        </div>
+
+        <div class="estimator-panel">
+          <!-- Static markup: connect the action attribute to a form backend such as Formspree or Netlify Forms to receive submissions. -->
+          <form class="estimator-form" action="#" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(289) 633-9311" autocomplete="tel" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required>
+              </div>
+              <div class="form-group">
+                <label for="eventDate">Event date</label>
+                <input type="date" id="eventDate" name="eventDate">
+              </div>
+              <div class="form-group">
+                <label for="city">City in Ontario</label>
+                <select id="city" name="city" autocomplete="address-level2" required>
+                  <option value="" disabled selected>Select city</option>
+                  <option>Mississauga</option>
+                  <option>Toronto</option>
+                  <option>Brampton</option>
+                  <option>Oakville</option>
+                  <option>Vaughan</option>
+                  <option>Hamilton</option>
+                  <option>Other Ontario City</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="eventType">Event type</label>
+                <select id="eventType" name="eventType" required>
+                  <option value="" disabled selected>Select event type</option>
+                  <option>Wedding</option>
+                  <option>Bridal Shower</option>
+                  <option>Baby Shower / Gender Reveal</option>
+                  <option>Birthday Celebration</option>
+                  <option>Corporate Event / Gala</option>
+                  <option>Engagement Party</option>
+                  <option>Anniversary</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <fieldset class="form-group form-group--full checkbox-fieldset">
+                <legend>Services needed</legend>
+                <div class="checkbox-group">
+                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Balloon Decor"> Balloon Decor</label>
+                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Venue Setup"> Venue Setup</label>
+                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Custom Merch"> Custom Merch</label>
+                  <label class="checkbox-pill"><input type="checkbox" name="services" value="Venue Repair"> Venue Repair</label>
+                </div>
+              </fieldset>
+
+              <div class="form-group">
+                <label for="budget">Estimated budget</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select a range</option>
+                  <option>Under $500</option>
+                  <option>$500 – $1,500</option>
+                  <option>$1,500 – $3,000</option>
+                  <option>$3,000 – $5,000</option>
+                  <option>$5,000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="details">Tell us about your vision</label>
+                <input type="text" id="details" name="details" placeholder="Colors, theme, guest count...">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Request My Estimate</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 34" aria-hidden="true">
+            <circle cx="14" cy="13" r="9" fill="#f3e9d8" stroke="#c19a5b" stroke-width="1.3"/>
+            <circle cx="24" cy="10" r="7" fill="#faf8f4" stroke="#a67f45" stroke-width="1.3"/>
+            <path d="M14 22v9M24 17v11" stroke="#c19a5b" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">Balloora<small>Events</small></span>
+        </a>
+        <p>An Ontario-based studio crafting luxury balloon décor and event styling across the Greater Toronto Area and beyond.</p>
+        <a href="https://www.instagram.com/ballooraevents/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Balloora on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:info@balloora.ca">info@balloora.ca</a>
+        <a href="tel:2896339311">(289) 633-9311</a>
+      </div>
+
+      <div class="footer-areas">
+        <h4>Service Area</h4>
+        <p>Servicing Ontario, including the GTA.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="featured-designs" class="section">
-  <div class="container">
-    <div class="section-header section-header--center" style="text-align: center; margin-bottom: 3rem;">
-      <h2>Featured Designs</h2>
-      <p class="section-lede">Explore our most popular balloon decorations, designed to make every occasion extra special.</p>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Balloora Inc. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Utilizing CSS Grid logic matching your existing layout, with a 5-column setup for desktop -->
-    <div class="featured-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
-      
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/classic-arch.jpg" alt="Classic Balloon Arch" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Classic Balloon Arch</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $180</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/birthday-backdrop.jpg" alt="Birthday Backdrop" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Birthday Backdrop</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $250</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/kids-theme.jpg" alt="Kids Theme Setup" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Kids Theme Setup</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $300</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/gender-reveal.jpg" alt="Gender Reveal Setup" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Gender Reveal Setup</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $350</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/baby-shower-decor.jpg" alt="Baby Shower Decor" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Baby Shower Decor</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $300</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/wedding-backdrop.jpg" alt="Wedding Backdrop" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Wedding Backdrop</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $450</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/table-centerpieces.jpg" alt="Table Centerpieces" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Table Centerpieces</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $60</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/corporate-events.jpg" alt="Corporate Events" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Corporate Events</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $400</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/balloon-columns.jpg" alt="Balloon Columns" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Balloon Columns</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $150</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-      <article class="design-card" style="text-align: center;">
-        <div class="design-image" style="margin-bottom: 1rem;">
-          <img src="assets/event-ceiling-decor.jpg" alt="Event Ceiling Decor" loading="lazy" decoding="async" style="width: 100%; border-radius: 8px;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Event Ceiling Decor</h3>
-        <span class="design-price" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Starting at $500</span>
-        <a href="#" class="btn btn-outline" style="width: 100%; padding: 0.5rem; background-color: #f5f0eb; border: none; border-radius: 4px;">View Details</a>
-      </article>
-
-    </div>
-  </div>
-</section>
+</body>
+</html>
