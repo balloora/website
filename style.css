@@ -680,14 +680,14 @@ textarea:focus-visible,
 
 .design-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
   gap: 36px 24px;
 }
 
 .design-card {
   display: grid;
-  grid-row: span 4;
+  grid-row: span 5;
   grid-template-rows: subgrid;
   justify-items: center;
   text-align: center;
@@ -717,6 +717,13 @@ textarea:focus-visible,
   margin-top: 18px;
   font-size: 1.05rem;
   font-weight: 600;
+}
+
+.design-desc {
+  color: var(--color-text-soft);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 34ch;
 }
 
 .design-price {
@@ -990,8 +997,8 @@ textarea:focus-visible,
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
   padding-block: 64px 40px;
 }
 
@@ -1009,7 +1016,8 @@ textarea:focus-visible,
 
 .footer-links h4,
 .footer-contact h4,
-.footer-areas h4 {
+.footer-areas h4,
+.footer-legal h4 {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
@@ -1022,8 +1030,14 @@ textarea:focus-visible,
   flex-direction: column;
 }
 
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-links a,
-.footer-contact a {
+.footer-contact a,
+.footer-legal a {
   display: block;
   font-size: 0.9rem;
   color: var(--color-text-soft);
@@ -1032,7 +1046,8 @@ textarea:focus-visible,
 }
 
 .footer-links a:hover,
-.footer-contact a:hover {
+.footer-contact a:hover,
+.footer-legal a:hover {
   color: var(--color-gold-deep);
 }
 
